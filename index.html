@@ -2,39 +2,59 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>صفحه اصلی ساده</title>
+
+  <!-- مهم ترین خط برای موبایل -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>M.R_LAC</title>
+
   <style>
-    /* کل صفحه */
+
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
     }
 
-    /* تصویر بک‌گراند کل صفحه */
     body {
-      background-image: url('https://s8.uupload.ir/files/photo_m.r_lac_fp6u.jpg'); /* ← مسیر عکس اصلی */
-      background-size: cover;         /* پر کردن کل صفحه */
-      background-position: center;    /* وسط تصویر */
+      background-image: url('https://s8.uupload.ir/files/photo_m.r_lac_fp6u.jpg');
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
+
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;      /* دکمه‌ها پایین صفحه */
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
     }
 
     .social-buttons {
-      margin-bottom: 50px; /* فاصله پایین صفحه */
+      margin-bottom: 6vh; /* به جای px -> روی همه صفحه‌ها بهتر جواب میده */
+      display: flex;
+      gap: 20px;
     }
 
     .social-buttons img {
-      width: 80px;
-      height: 80px;
-      margin: 10px;
+
+      /* 👇 این خط باعث میشه روی موبایل هم درست سایز بشه */
+      width: clamp(60px, 18vw, 100px);
+
+      height: auto;
       cursor: pointer;
+
+      transition: transform 0.2s;
     }
+
+    /* افکت خفن 😎 */
+    .social-buttons img:hover {
+      transform: scale(1.15);
+    }
+
+    /* وقتی با انگشت میزنن */
+    .social-buttons img:active {
+      transform: scale(0.95);
+    }
+
   </style>
 </head>
 <body>
@@ -43,11 +63,11 @@
     <a href="https://t.me/m_rlac" target="_blank">
       <img src="https://s8.uupload.ir/files/photo_telegram_k1nt.jpg" alt="تلگرام">
     </a>
+
     <a href="https://rubika.ir/M_R_lac" target="_blank">
       <img src="https://s8.uupload.ir/files/rubika_s59v.jpg" alt="روبیکا">
     </a>
   </div>
 
 </body>
-
 </html>
