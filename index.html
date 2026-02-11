@@ -6,7 +6,6 @@
 <title>M.R_LAC</title>
 
 <style>
-
 html, body {
   height: 100%;
   margin: 0;
@@ -33,32 +32,65 @@ body {
   gap: 20px;
 }
 
+/* دکمه‌ها و ورود */
 .social-buttons img {
   width: 75px;
   height: 75px;
   border-radius: 20px;
-  transition: 0.3s;
+  transition: transform 0.3s;
+  animation: floatIn 1.5s ease-out forwards;
 }
 
+/* hover بزرگ شدن */
 .social-buttons img:hover {
   transform: scale(1.15);
 }
 
-/* 🔥 تنظیم مخصوص موبایل */
-@media (max-width: 768px) {
+/* ورود از پایین */
+@keyframes floatIn {
+  0% { transform: translateY(200px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
 
+/* مسیر مرتب و نرم - دکمه اول (چپ) */
+@keyframes float1 {
+  0%   { transform: translate(0,0) rotate(0deg); }
+  25%  { transform: translate(-12px,-6px) rotate(-5deg); }
+  50%  { transform: translate(-12px,6px) rotate(5deg); }
+  75%  { transform: translate(0,6px) rotate(-3deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+/* مسیر مرتب و نرم - دکمه دوم (راست) */
+@keyframes float2 {
+  0%   { transform: translate(0,0) rotate(0deg); }
+  25%  { transform: translate(10px,-5px) rotate(6deg); }
+  50%  { transform: translate(10px,5px) rotate(-6deg); }
+  75%  { transform: translate(0,5px) rotate(3deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+/* اعمال انیمیشن شناور بعد از ورود */
+.social-buttons a:nth-child(1) img {
+  animation: floatIn 1.5s ease-out forwards, float1 5s ease-in-out 1.5s infinite alternate;
+}
+
+.social-buttons a:nth-child(2) img {
+  animation: floatIn 1.5s ease-out forwards, float2 5s ease-in-out 1.5s infinite alternate;
+}
+
+/* موبایل فرندلی */
+@media (max-width: 768px) {
   body{
-    background-size: contain; /* تصویر کامل نمایش داده شود */
-    background-color: black;  /* اگر اطراف خالی شد، مشکی باشد */
+    background-size: contain;
+    background-color: black;
   }
 
   .social-buttons img{
     width: 65px;
     height: 65px;
   }
-
 }
-
 </style>
 </head>
 
