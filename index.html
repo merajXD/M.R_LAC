@@ -16,9 +16,11 @@ html, body {
 /* بک گراند اصلی */
 body {
   background-image: url('https://s8.uupload.ir/files/photo_m.r_lac_fp6u.jpg');
-  background-size: cover;
+
+  background-size: contain; /* 👈 کل عکس دیده شود */
   background-position: center;
   background-repeat: no-repeat;
+  background-color: black; /* رنگ نزدیک به تصویر */
 
   display: flex;
   justify-content: center;
@@ -52,7 +54,7 @@ body {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* مسیر مرتب و نرم - دکمه اول (چپ) */
+/* مسیر مرتب و نرم - دکمه اول */
 @keyframes float1 {
   0%   { transform: translate(0,0) rotate(0deg); }
   25%  { transform: translate(-12px,-6px) rotate(-5deg); }
@@ -61,7 +63,7 @@ body {
   100% { transform: translate(0,0) rotate(0deg); }
 }
 
-/* مسیر مرتب و نرم - دکمه دوم (راست) */
+/* مسیر مرتب و نرم - دکمه دوم */
 @keyframes float2 {
   0%   { transform: translate(0,0) rotate(0deg); }
   25%  { transform: translate(10px,-5px) rotate(6deg); }
