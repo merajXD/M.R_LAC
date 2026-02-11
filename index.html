@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.R_LAC</title>
 
-  <!-- مهم ترین خط برای موبایل -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 
-  <title>M.R_LAC</title>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-  <style>
+/* بک گراند اصلی */
+body {
+  background-image: url('https://s8.uupload.ir/files/photo_m.r_lac_fp6u.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
-    body {
-      background-image: url('https://s8.uupload.ir/files/photo_m.r_lac_fp6u.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+/* دکمه‌ها */
+.social-buttons {
+  margin-bottom: 60px;
+  display: flex;
+  gap: 20px;
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
+.social-buttons img {
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
 
-    .social-buttons {
-      margin-bottom: 6vh; /* به جای px -> روی همه صفحه‌ها بهتر جواب میده */
-      display: flex;
-      gap: 20px;
-    }
+.social-buttons img:hover {
+  transform: scale(1.15);
+}
 
-    .social-buttons img {
+/* 🔥 تنظیم مخصوص موبایل */
+@media (max-width: 768px) {
 
-      /* 👇 این خط باعث میشه روی موبایل هم درست سایز بشه */
-      width: clamp(60px, 18vw, 100px);
+  body{
+    background-size: contain; /* تصویر کامل نمایش داده شود */
+    background-color: black;  /* اگر اطراف خالی شد، مشکی باشد */
+  }
 
-      height: auto;
-      cursor: pointer;
+  .social-buttons img{
+    width: 65px;
+    height: 65px;
+  }
 
-      transition: transform 0.2s;
-    }
+}
 
-    /* افکت خفن 😎 */
-    .social-buttons img:hover {
-      transform: scale(1.15);
-    }
-
-    /* وقتی با انگشت میزنن */
-    .social-buttons img:active {
-      transform: scale(0.95);
-    }
-
-  </style>
+</style>
 </head>
+
 <body>
 
-  <div class="social-buttons">
-    <a href="https://t.me/m_rlac" target="_blank">
-      <img src="https://s8.uupload.ir/files/photo_telegram_k1nt.jpg" alt="تلگرام">
-    </a>
+<div class="social-buttons">
+  <a href="https://t.me/m_rlac" target="_blank">
+    <img src="https://s8.uupload.ir/files/photo_telegram_k1nt.jpg" alt="تلگرام">
+  </a>
 
-    <a href="https://rubika.ir/M_R_lac" target="_blank">
-      <img src="https://s8.uupload.ir/files/rubika_s59v.jpg" alt="روبیکا">
-    </a>
-  </div>
+  <a href="https://rubika.ir/M_R_lac" target="_blank">
+    <img src="https://s8.uupload.ir/files/rubika_s59v.jpg" alt="روبیکا">
+  </a>
+</div>
 
 </body>
 </html>
